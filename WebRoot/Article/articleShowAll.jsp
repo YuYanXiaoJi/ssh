@@ -200,24 +200,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="slider_container" style=" width: 100%;" >
             <div class="slide" style=" height: 500px;"> 
                 <!-- Slide image -->
-                <a target="_blank" href="<%=basePath%>article/getArticleDetail.action?userArticle.id=38"> 
+                <%-- <a target="_blank" href="<%=basePath%>article/getArticleDetail.action?userArticle.id=38"> 
                 	<img style="z-index: 1; position: absolute;" src="../image/index-images/article-slider1.jpg">
-                </a>
-                <div class="slide_content">
-                    <div class="slide_content_wrap">   
+                </a> --%>
+               <%--  <div class="slide_content">
+                	
+                     <div class="slide_content_wrap">   
                          
                         	<div class="cover" style="  float: right; height: 100%;width: 50%;margin-top: 100;"> 
                         		 <h1 style="z-index:1;position:absolute; margin: 50 0 0 -300;">黄瑶古镇</h1>
                         		 <br>
                         		 <span style="width: 500;z-index:1;position:absolute;margin:150 0 0 -300">古镇是白墙灰瓦，小小的石拱桥，穿城而过如碧玉带般秀美的河水。</span>
                         	 </div> 
-                        	
-                         
-                    </div> 
-                </div>
-                  
+                    </div>   
+                </div> --%>
+                  <img style="height: 500;  " src="../image/index-images/article-slider1.jpg">
             </div>
-            <div class="slide">
+           <%--  <div class="slide">
 	             <a target="_blank" href="<%=basePath%>article/getArticleDetail.action?userArticle.id=45"> 
                 	<img style="z-index: 1; position: absolute;" src="../image/index-images/article-slider2.jpg">
                 </a>
@@ -232,9 +231,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </div>  
                     </div> 
                
-           </div> 
+           </div>  --%>
            
-            <div class="slide">
+           <%--  <div class="slide">
 	             <a target="_blank" href="<%=basePath%>article/getArticleDetail.action?userArticle.id=36"> 
                 	<img style="z-index: 1; position: absolute;" src="../image/index-images/article-slider3.jpg">
                 </a>
@@ -249,7 +248,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </div>  
                     
                 </div>
-           </div> 
+           </div>  --%>
            
             
         </div>

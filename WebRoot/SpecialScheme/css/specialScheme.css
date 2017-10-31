@@ -1,0 +1,117 @@
+.header_title {
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+}
+.header_title .header_title_img {
+    position: relative;
+    margin: 0 auto;
+    height: 140px;
+    background: url(../images/title.png) no-repeat;
+    background-position-x: center;
+    background-position-y: -34px;
+}
+.subject_set {
+    margin: 0 auto;
+    margin-top: 45px;
+    min-height: 100%;
+    width: 1160px;
+}
+.subject_cards_set {
+    text-align: justify;
+    letter-spacing: 15px;
+}
+.subject_cards {
+    padding: 0;
+    margin-left: -21px;
+}
+.subject_cards li {
+    list-style: none;
+    float: left;
+    margin-left: 23px;
+    width: 370px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+.subject_card {
+    width: 370px;
+    height: 320px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 33px;
+    box-shadow: rgb(241, 241, 241) -5px 0px 10px, rgb(241, 241, 241) 5px 0px 10px, rgb(241, 241, 241) 0px -5px 10px, rgb(241, 241, 241) 0px 5px 10px;
+    color: rgb(50, 50, 50);
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 6px;
+    font: 16px "HYQiHei DES", "Microsoft YaHei", 微软雅黑;
+    transition: all 0.35s ease;
+}
+div {
+    display: block;
+}
+.subject_card>img {
+    width: 100%;
+    height: 233px;
+}
+img {
+    border: none;
+}
+.subject_card_footer {
+    padding: 20px 0;
+}
+.fl {
+    float: left!important;
+}
+.subject_card_words {
+    letter-spacing: -.3px;
+    width: 330px;
+    margin-left: 20px;
+    margin-right: 15px;
+    word-break: break-all;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+/* 下面是分页 */
+#cards_pages {
+    list-style-type: none;
+    text-align: center;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+#cards_pages li {
+    display: inline-block;
+    padding: 0 6px;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 24px;
+    color: #636363;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#cards_pages li.active {
+    background: #5ea67c!important;
+    border-radius: 3px;
+    font-weight: 700;
+    color: #fff;
+}
+ .cards_pages_bar {
+    height: 25px;
+    letter-spacing: 0;
+    margin-bottom: 45px;
+}

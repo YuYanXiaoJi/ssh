@@ -1,0 +1,30 @@
+/* 圆角头像 */
+
+  .avatar-img {
+   margin:10px 0;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+  .avatar-img img {
+  	height:40px;
+  	width:40px;
+    display: block;
+}
+
+/* 名字水平居中 */
+.user-name{
+	float: left;line-height: 50px;height: 50px;
+}
+.user-name a:link{
+	color:black;
+	text-decoration: none;
+}
+.user-name a:hover{
+	color:#41c074;
+	text-decoration: none;
+}
+
+ 

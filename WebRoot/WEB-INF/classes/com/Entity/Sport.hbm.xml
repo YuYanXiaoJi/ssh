@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.Sport" table="tb_Sport" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+        
+        <property name="name" type="java.lang.String" ></property>
+        <property name="summary" type="java.lang.String" ></property>
+        <property name="cover" type="java.lang.String" length="5000"></property>
+        
+        <property name="content" type="java.lang.String">
+        	<column name="content" length="1000000"></column>
+        </property>
+        
+        <property name="wantCount" type="java.lang.Integer" ></property>
+        <property name="x" type="java.lang.String" ></property>
+        <property name="y" type="java.lang.String" ></property>
+        
+        <many-to-one name="category1"	class="com.Entity.Category1"
+   			column="category1_id"	not-null="true" lazy="false"	>
+   		</many-to-one>
+   		
+   		<many-to-one name="category2"	class="com.Entity.Category2"
+   			column="category2_id"	not-null="true" lazy="false"	>
+   		</many-to-one>
+   		
+   		<property name="customTag" type="java.lang.String"></property>
+        
+        <property name = "commentCount" type = "java.lang.Integer"></property>
+        
+        <property name="pageViewCount" type = "java.lang.Integer"></property>
+        <property name="score" type="java.lang.Double"></property>
+        <property name="time" type="java.util.Date"></property>
+    </class>
+    
+
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 
+ 
+    <package name="talk"  extends="struts-default"  namespace="/talk"   >
+		 <!--当需要修改一个问题的是时候  -->
+		 <action name="reviseQuestion" class="talkAction" method="reviseQuestion">
+		 	<result name="success">/ueditor/Question.jsp</result>
+		 </action>
+		 <!--关注问题或者取消  -->
+		 <action name="focusOrNo" class="questionFocusAction" method="focusOrNo"></action>
+		 <!--保存一个问题  -->
+		 <action name="saveQuestion" class="talkAction" method="saveQuestion"> 
+		 		<result name="success" type="redirectAction">getQuestionDetail?question.id=${question.id}</result>
+		 		<result name="input">/index.jsp</result>
+		 </action>
+		 <!--在首页展示所有问题  -->
+		 <action name="getQuestionAll" class="talkAction" method="getQuestionAll">
+		 	<result name="success">/Talk/showQuestionAll.jsp</result>
+		 </action>
+		 <!--得到问题详情和回答  -->
+		 <action name="getQuestionDetail" class="talkAction" method="getQuestionDetail">
+		 	 <result name="success">/Talk/showQuestionDetail.jsp</result>
+		 </action>
+		 
+		 <!-- ajax 得到更多的回答  -->
+		 <action name="ajaxGetMoreAnswer" method="ajaxGetMoreAnswer" class="talkAction"></action>
+		 
+		 <!-- ajax 保存一，二级回复  -->
+		 <action name="ajaxSaveReply" method="ajaxSaveReply" class="talkAction"></action>
+ 
+		 <!--当一个回复太多得到所有回复  -->
+		<action name="getSecondeAnswerAll" class="talkAction" method="getSecondeAnswerAll">
+			<result name="success">/Talk/showSecondeAnswerAll.jsp</result>
+		</action>
+		<!--对一个问题是否点赞  -->
+		<action name="addOrSub" class="talkAction"  method="addOrSub">
+		</action>
+     </package>   
+ 
+ 
+</struts>

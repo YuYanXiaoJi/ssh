@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.SportWantTo" table="tb_SportWantTo" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+       
+        <many-to-one name="sport" column="sport_id" 
+        	class="com.Entity.Sport"></many-to-one> 
+        
+        <many-to-one name="user" column="user_id" class="com.Entity.User"></many-to-one>
+        
+       
+    </class>
+    
+
+</hibernate-mapping>

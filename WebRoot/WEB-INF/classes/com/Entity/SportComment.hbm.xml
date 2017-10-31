@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.SportComment" table="tb_SportComment" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+        
+        <many-to-one name="sport" column="sport_id" class="com.Entity.Sport"   lazy="false" ></many-to-one>
+        
+        <property name="content" type="java.lang.String" length="8000"></property>
+        
+        <many-to-one name="user" column="user_id"  class="com.Entity.User" cascade="all" lazy="false"></many-to-one>
+        
+        <property name="time" type="java.util.Date" ></property> 
+         
+    </class>
+    
+
+</hibernate-mapping>

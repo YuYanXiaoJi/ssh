@@ -1,0 +1,53 @@
+	/*ËÑË÷¿ò7*/
+ 
+		form {
+			position: relative;
+		}
+
+		.search input, button {
+			border: none;
+			outline: none;
+		}
+
+		.search input {
+			width: 100%;
+			height: 42px;
+			padding-left: 13px;
+		}
+
+		.search  button {
+			height: 42px;
+			width: 42px;
+			cursor: pointer;
+			position: absolute;
+		}
+ 
+	
+		.bar7 {
+			/* background: #7BA7AB; */
+		}
+		.bar7 form {
+			height: 42px;
+		}
+		.bar7 input {
+			width: 250px;
+			border-radius: 42px;
+			border: 2px solid #324B4E;
+			/* background: #F9F0DA; */
+			transition: .3s linear;
+			/* float: right; */
+		}
+		.bar7 input:focus {
+			width: 300px;
+		}
+		.bar7 button {
+			background: none;
+			top: -2px;
+			right: 0;
+		}
+		.bar7 button:before{
+		  content: "\f002";
+		  font-family: FontAwesome;
+		  color: #324b4e;
+		}
+ 

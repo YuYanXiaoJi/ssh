@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:aop="http://www.springframework.org/schema/aop" 
+ xmlns:tx="http://www.springframework.org/schema/tx"
+ xsi:schemaLocation=" http://www.springframework.org/schema/beans
+ 					 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+					http://www.springframework.org/schema/aop 
+					http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+					http://www.springframework.org/schema/tx
+					 http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+					http://www.springframework.org/schema/context
+					 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- 扫描注解 -->
+    <context:component-scan base-package="com.DaoImpl,com.ServiceImpl,com.Action"/>  
+     
+    <!-- 定义数据源 -->
+    <bean id="sqlserver" class="org.apache.commons.dbcp.BasicDataSource">
+    	<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+    	<property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=City"></property>
+    	<property name="username" value="sa"></property>
+    	<property name="password" value="123456"></property>
+    </bean> 
+    
+    <!-- 定义sessionfactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    	<property name="dataSource" ref="sqlserver"></property>
+    	<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+    	<!-- 定义**.hbm.xml映射文件 -->
+    	<property name="mappingLocations" value="classpath:com/Entity/*.hbm.xml"></property>
+    
+    </bean>      
+    
+    <!-- 定义事务管理器 -->
+    <bean id="transactionManager"  class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    	<property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    
+    <!--定义事务属性  -->
+    <bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+    	<property name="transactionManager" ref="transactionManager"></property>
+    	<property name="transactionAttributes">
+    		<props>
+    			<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop> 
+	      		<prop key="*">PROPAGATION_REQUIRED</prop> 
+    		</props>
+    	</property>
+    </bean>  
+    
+    <!-- 定义需要代理的bean -->
+      <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+    	<property name="beanNames">
+    		<list>
+    			<value>sportService</value>
+    			<value>userService</value>
+    			<value>articleService</value>
+    			<value>newsService</value>
+    			<value>articleGreatService</value>
+    			<value>sportWantToService</value>
+    			<value>otherToTagService</value>
+    			<value>talkService</value>
+    			<value>questionFocusService</value>
+    			<value>cacheTagService</value>
+    			<value>adminStatisticsService</value>
+    		</list>
+    	</property>
+    	<property name="interceptorNames">
+    		<list>
+    			<value>transactionInterceptor</value>
+    		</list>
+    	</property>
+    </bean>  
+ 
+</beans>

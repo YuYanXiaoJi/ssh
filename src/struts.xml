@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<include file="./Struts/user.xml"></include>
+	<include file = "./Struts/userArticle.xml"></include>
+	<include file = "./Struts/article.xml"></include>
+	<include file="./Struts/tag.xml"></include>
+	<include file="./Struts/talk.xml"></include>
+ 
+    <constant name="struts.i18n.encoding" value="utf-8" /> 
+    <constant name="struts.multipart.maxSize" value="11943040"/> 
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+ 
+    <package name="sport"  extends="struts-default"  namespace="/sport"   >
+		<!-- 筛选不同类别  -->
+		<action name="getSearchCategory" method="getSearchCategory" class="sportAction"></action>
+		<!-- 用户搜索tag 或者  关键字 -->
+		<action name="searchContent" method="searchContent" class="sportAction">
+			<result name="success">/Search/showSearchResult.jsp</result>
+		</action>
+		
+		<!--删除或者增加点赞信息  -->
+		<action name="addOrSub" class="sportWantToAction"  method="addOrSub"></action>
+		 
+		<!--显示所有景点  -->
+		<action name="showSportAll" class="sportAction" method="showSportAll">
+			<result name="success">/Sport/sportShowAll.jsp</result>
+		</action>
+		<!--显示详细景点信息和评论  -->
+		<action name="getSportDetial" class="sportAction" method="getSportDetail">
+			<result name="success" >/Sport/sportShowDetail.jsp</result>
+		</action>
+		<!-- 判断对景点的评论-->
+		<action name="saveSportCR" class="sportAction" method="saveSportCR">
+			<result name="saveSportComment" type="redirectAction" >
+				 <param name="actionName">saveSportComment</param>
+       			 <param name="CR">${CR}</param>
+				 <param name="sport.id">${sport.id}</param>
+			</result>
+			 <result name="saveSportReply" type="chain" >
+				  <param name="actionName">saveSportReply</param>
+			</result>
+		</action>
+		<!-- 保存对文章的回复 -->
+		<action name="saveSportComment" class="sportAction" method="saveSportComment">
+			<result name="success" type="redirectAction" >
+				<param name="actionName">getSportDetial</param>
+				<param name="sport.id">${sport.id}</param>
+				<param name="isToEnd">${isToEnd}</param>
+			</result>
+			<result name="input">/index.jsp</result>			
+		</action>
+		<!--保存对回复的回复  -->
+		<action name="saveSportReply" class="sportAction" method="saveSportReply">
+			<result name="success" type="redirectAction" >
+				<param name="actionName">getSportDetial</param>
+				<param name="sport.id">${sport.id}</param>
+				<param name="isToEnd">${isToEnd}</param>
+			</result>
+			<result name="input">/index.jsp</result>	
+		</action>
+		<!--对关键词的搜索  -->
+		<action name="search" class="sportAction" method="search" >
+			<result name="sport"  >/Sport/sportShowAllSearch.jsp</result>
+			<result name= "userArticle">/Sport/articleShowAllSearch.jsp</result>
+		</action>
+
+     </package>   
+ 
+ 
+</struts>

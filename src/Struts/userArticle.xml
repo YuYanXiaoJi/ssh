@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+		
+		 <package name="userArticle"  extends="struts-default"  namespace="/userArticle"   >
+				<!--删除文章  -->
+				<action name="deleteUserArticle" method="deleteUserArticle" class="userArticleAction"></action>
+				<!--检查是不是有草稿  -->
+				<action name="getUserDraft" class="userArticleAction" method="getUserDraft">
+					<result name="success">/ueditor/createArticle.jsp</result>
+					<result name="input">/index.jsp</result>
+				</action>
+				<!-- 保存文章  -->  
+				<action name="saveUserArticle" class="userArticleAction" method="saveUserArticle">
+					<!-- 转到articleall 页面   需要审核-->
+					<result name="success" type="redirectAction">
+						<param name="namespace">/article</param>
+						<param name="actionName">getArticleAll</param>
+					</result>
+					<!--session过期  -->
+					<result name="input">/index.jsp</result>
+					<!-- 保存的是草稿 -->	
+					<result name="index" type="redirectAction">
+						<param name="namespace">/article</param>
+						<param name="actionName">getArticleAll</param>
+					</result>		
+				</action>
+					
+				<!-- 得到个人所有游记 -->
+				<action name="getUserArticleAll" class="userArticleAction" method="getUserArticleAll" >
+					<result name="success">/User/userArticleAll.jsp</result>
+					<result name="input">/index.jsp</result>
+				</action>	
+				 <!--个人修改文章  -->
+				 <action name="getArticleDetailUpdate" class="userArticleAction" method="getArticleDetailUpdate">
+					<result name="success" >/ueditor/createArticle.jsp</result>
+				</action>
+				
+				<!-- 得到个人详细游记    转DAO公共的那个方法--> 
+				<action name="getArticleDetail" class="articleAction" method="getArticleDetail">
+					<result name="success" >/Article/articleShowDetail.jsp</result>
+				</action>					
+		 </package>
+</struts>

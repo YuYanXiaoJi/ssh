@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.Answer" table="tb_Answer" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+        
+        <many-to-one name="user"	class="com.Entity.User"
+   			column="user_id"	not-null="true"	 lazy="false">
+   		</many-to-one>
+        
+        <property name="time" type="java.util.Date"></property>
+ 
+        <property name="content" type="java.lang.String" >
+        	<column name="content" length="1000000"></column>
+        </property>
+ 
+        <property name = "question_id" type = "java.lang.Integer"></property>
+        
+        <property name = "father_id" type = "java.lang.Integer"></property>
+        
+        <property name = "flag" type = "java.lang.Integer"></property>
+         <property name = "greatCount" type = "java.lang.Integer"></property>
+    </class>
+    
+
+</hibernate-mapping>

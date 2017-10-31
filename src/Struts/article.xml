@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 
+    <package name="article"  extends="struts-default"  namespace="/article"   >
+			
+			<!--利用ajax 得到更多  -->
+			<action name="getArticleMore" class="articleAction" method="getArticleMore" ></action>
+			<!--得到所有文章  -->
+			<action name="getArticleAll" class="articleAction" method="getArticleAll" >
+				<result name="success">/Article/articleShowAll.jsp</result>
+				<result name="error">/index.jsp</result>
+			</action>
+			<!--得到一片文章详情  -->
+			<action name="getArticleDetail" class="articleAction" method="getArticleDetail" >
+				<result name="success" >/Article/articleShowDetail.jsp</result>
+			</action>
+			
+			<!--删除或者增加点赞信息  -->
+			<action name="addOrSub" class="articleGreatAction"  method="addOrSub"></action>
+			
+			<!-- 得到优秀游记  在首页显示-->
+			<action name="getIndexArticle" class="articleAction" method="getIndexArticle" >
+				<result name="success">/indexShow.jsp</result>
+			</action>
+			<!--保存一个文章的评论  -->
+			<action name="saveUserArticleComment" class="articleAction" method="saveUserArticleComment" >
+				<result name="success"  type="redirectAction">
+					<param name="actionName">getArticleDetail</param>
+					<param name="userArticle.id">${userArticle.id}</param>
+					<param name="isToEnd">${isToEnd}</param>
+				</result>
+				<result name="input">/index.jsp</result>
+			</action>
+			<!-- 保存对一个文章的2级回复 -->
+			<action name="saveUserArticleReply" class="articleAction" method="saveUserArticleReply">
+				<result name="success"  type="redirectAction">
+					<param name="actionName">getArticleDetail</param>
+					<param name="userArticle.id">${userArticle.id}</param>
+					<param name="isToEnd">${isToEnd}</param>
+				</result>
+				<result name="input">/index.jsp</result>
+			</action>
+			<!-- 判断对文章的的评论的类型-->
+		   <action name="saveUserArticleCR" class="articleAction" method="saveUserArticleCR">
+			 <result name="saveUserArticleComment" type="chain" >
+				 <param name="actionName">saveUserArticleComment</param>
+			 </result>
+			 <result name="saveUserArticleReply" type="chain" >saveUserArticleReply</result>
+		   </action>
+     </package>   
+ 
+ 
+</struts>

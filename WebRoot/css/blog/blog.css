@@ -1,0 +1,170 @@
+/*°´Å¥  */
+ 
+a.button {
+			position: relative;
+			color: #76c7c0;
+			text-decoration: none;
+			background-color: #76c7c0;
+			font-family: 'Yanone Kaffeesatz';
+			font-weight: 700;
+			font-size: 3em;
+			display: block;
+			padding: 4px;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			-webkit-box-shadow: 0px 9px 0px grey, 0px 9px 25px rgba(0,0,0,.7);
+			-moz-box-shadow: 0px 9px 0px grey, 0px 9px 25px rgba(0,0,0,.7);
+			box-shadow: 0px 9px 0px grey, 0px 9px 25px rgba(0,0,0,.7);
+			margin: 100px auto;
+			width: 200px;
+			text-align: center;
+			
+			-webkit-transition: all .1s ease;
+			-moz-transition: all .1s ease;
+			-ms-transition: all .1s ease;
+			-o-transition: all .1s ease;
+			transition: all .1s ease;
+		}
+
+		a.button:active {
+			-webkit-box-shadow: 0px 3px 0px grey, 0px 3px 6px rgba(0,0,0,.9);
+			-moz-box-shadow: 0px 3px 0px grey, 0px 3px 6px rgba(0,0,0,.9);
+			box-shadow: 0px 3px 0px grey, 0px 3px 6px rgba(0,0,0,.9);
+			position: relative;
+			top: 6px;
+		}
+
+
+@charset "UTF-8";
+ @font-face {
+ font-family: 'fontello';
+ src: url("./font/fontello.eot?6946176");
+ src: url("./font/fontello.eot?6946176#iefix") format('embedded-opentype'), url("./font/fontello.woff?6946176") format('woff'), url("./font/fontello.ttf?6946176") format('truetype'), url("./font/fontello.svg?6946176#fontello") format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+section.single-page {
+	padding: 4.75em 0; /* 76px */
+}
+section.single-page h1 {
+	text-align: center;
+	font-family:  'Patua One', cursive;
+	margin-bottom: 2em; /* 72px */
+	font-size: 2.25em; /* 36px */
+}
+
+section {
+	display: block;
+}
+
+section img {
+    width: auto\9;
+    height: 277.5px;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+.container {
+ width: 1170px;
+}
+.container {
+	margin-right: auto;
+	margin-left: auto;
+ *zoom: 1;
+}
+.container:before, .container:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.container:after {
+	clear: both;
+}
+.container-fluid {
+	padding-right: 20px;
+	padding-left: 20px;
+ *zoom: 1;
+}
+.container-fluid:before, .container-fluid:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.container-fluid:after {
+	clear: both;
+}
+
+ @media (min-width: 1200px) {
+ .row {
+  margin-left: -30px; 
+  
+ zoom: 1;
+}
+.row-fluid .span4 {
+	width: 31.914893617021278%;
+ *width: 31.861702127659576%;
+}
+ [class*="span"] {
+ float: left;
+ min-height: 1px;
+ margin-left: 20px;
+}
+ .span4 {
+ width: 370px;
+}
+article.post {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+section#news .align {
+	font-size: 6em;
+	text-align: center;
+}
+
+.post-date {
+	color: #A5A5A2;
+	float: right;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	font-style: normal;
+	line-height: 2;
+	margin-right: 5px;
+}
+article .inside {
+	margin: 18px 24px 24px;
+	padding-top: 1em;
+	background: url("./img/dot-row-2.png") repeat-x scroll 0 0 transparent !important;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+ font-family: 'fontello';
+ font-style: normal;
+ font-weight: normal;
+ speak: none;
+ display: inline-block;
+ text-decoration: inherit;
+ width: 1em;
+ margin-right: 0.2em;
+ text-align: center;
+ 
+ font-variant: normal;
+ text-transform: none;
+ 
+ line-height: 1em;
+/*  font-size: 800%; */
+ margin-left: 0.2em;
+ 
+}
+ [class*="span"] {
+ float: left;
+ min-height: 1px;
+ margin-left: 20px;
+}
+.icon-pencil-circled:before {
+	content: '\e067';
+}  

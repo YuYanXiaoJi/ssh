@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+     <package name="default"    extends="struts-default" >
+
+     	<!-- 保存用户报名情况 -->
+     	<action name="saveSpecialSchemeUser" method="saveSpecialSchemeUser" class="adminStatisticsAction">
+     		<result name="success" type="redirectAction">
+     			<param name="actionName">userGetSpecialSchemeDetail</param>
+     			<param name="specialScheme.id">${specialSchemeUser.schemeId.id}</param>
+     		</result>
+     	</action>
+     	
+     	<!-- admin   得到一个活动的详情  -->
+     	<action name="adminGetSpecialSchemeDetail" method="getSpecialSchemeDetail" class="adminStatisticsAction">
+     		<result name="success">/Admin/add-scheme.jsp</result>
+     	</action>
+     	<!-- user   得到一个活动的详情  -->
+     	<action name="userGetSpecialSchemeDetail" method="getSpecialSchemeDetail" class="adminStatisticsAction">
+     		<result name="success">/SpecialScheme/specialSchemeDetail.jsp</result>
+     	</action>
+     	
+     	<!-- admin  添加特别策划 -->
+     	<action name="saveScheme" method="saveScheme" class="adminStatisticsAction">
+     		<result name="success" type="redirectAction">getSpecialSchemeAll</result>
+     	</action>
+     	<!-- user 展示所有的 -->
+     	<action name="userGetSpecialSchemeAll" method="getSpecialSchemeAll" class="adminStatisticsAction">
+     		<result name="success">/SpecialScheme/specialScheme.jsp</result>
+     	</action>
+     	<!-- admin  展示所有的活动  -->
+     	<action name="getSpecialSchemeAll" method="getSpecialSchemeAll" class="adminStatisticsAction">
+     		<result name="success">/Admin/special-scheme.jsp</result>
+     	</action>
+     	
+     	<!--admin 退出登入  -->
+     	<action name="adminLoginOut" class="adminStatisticsAction" method="adminLoginOut">
+     		<result name="success" type="dispatcher">/User/Login.jsp</result>
+     	</action>
+     	
+     	<!-- admin forbidden User -->
+     	<action name="adminForbiddenUser" method="adminForbiddenUser" class="adminStatisticsAction"></action>
+     	<!-- admin 管理 用户 -->
+     	<action name="adminGetUserAll" method="adminGetUserAll" class="adminStatisticsAction">
+     		<result name="success">/Admin/show-user.jsp</result>
+     	</action>
+     	
+     	<!-- admin 删除一个问题的回答  或者 回答下的  一条评论 -->
+     	<action name="adminDeleteQuestionAnswer" method="adminDeleteQuestionAnswer" class="adminStatisticsAction"></action>
+     	<!--admin  得到一个问题的所有的回答  -->
+     	<action name="getAnswerAll" method="getAnswerAll" class="adminStatisticsAction"></action>
+     	<!--admin 删除一个问题  -->
+     	<action name="adminDeleteQuestion" method="adminDeleteQuestion" class="adminStatisticsAction"></action>
+     	<!--admin adminGetQuestionDetail  -->
+     	<action name="adminGetQuestionDetail" method="adminGetQuestionDetail" class="adminStatisticsAction"></action>
+     	<!--admin 得到questionAll  -->
+     	<action name="adminGetQuestionAll" method="adminGetQuestionAll" class="adminStatisticsAction">
+     		<result name="success">/Admin/question.jsp</result>
+     	</action>
+     	
+     	<!--admin  删除article 的评论  -->
+     	<action name="adminDeleteArticleComment" method="adminDeleteArticleComment" class="adminStatisticsAction"></action>
+     	<!--admin 得到所有的sport的评论列表  -->
+     	<action name="getArticleCommentAll" method="getArticleCommentAll" class="adminStatisticsAction"></action>
+     	<!--admin 得到文章详情  -->
+     	<action name="adminGetArticleDetail" method="adminGetArticleDetail" class="adminStatisticsAction"></action>
+     	<!--admin 通过审核某文章  -->
+     	<action name="adminAdoptArticle" method="adminAdoptArticle" class="adminStatisticsAction"></action>
+     	<!--admin 删除文章  -->
+     	<action name="adminDeleteArticle" method="adminDeleteArticle" class="adminStatisticsAction"></action>
+     	<!--admin 得到所有的  管理文章  -->
+     	<action name="adminGetArticleAll" method="adminGetArticleAll" class="adminStatisticsAction">
+     		<result name="success">/Admin/article.jsp</result>
+     	</action>
+     	
+     	<!--admin 删除选中的comment  -->
+     	<action name="adminDeleteComment" method="adminDeleteComment" class="adminStatisticsAction"></action>
+     	<!--admin 得到所有的sport的评论列表  -->
+     	<action name="getSportCommentAll" method="getSportCommentAll" class="adminStatisticsAction"></action>
+     	<!--admin删除sport操作  -->
+     	<action name="adminDeleteSport" method="adminDeleteSport" class="adminStatisticsAction"></action>
+     	<!--admin 得到sport的detail（为了修改） -->
+     	<action name="adminGetSportDetail" method="adminGetSportDetail" class="adminStatisticsAction">
+     		<result name="success">/Admin/add-sport.jsp</result>
+     	</action>
+     	<!-- admin执行新建  修改后保存 -->
+     	<action name="saveUpdateSport" method="saveUpdateSport" class="adminStatisticsAction">
+     		<result name="success" type="redirectAction">adminGetSportAll</result>
+     	</action>
+     	<!--得到所有的乡村  -->
+     	<action name="adminGetSportAll" method="adminGetSportAll" class="adminStatisticsAction">
+     		<result name="success">/Admin/sport.jsp</result>
+     	</action>
+     	
+     	<!--系类报表   得到所有的历史访问量  -->
+     	<action name="getPageViewAll" method="getPageViewAll" class="adminStatisticsAction"></action>
+     	<action name="getTagCloud" method="getTagCloud" class="adminStatisticsAction"></action>
+     	<action name="getPageViewPie" method="getPageViewPie" class="adminStatisticsAction"></action>
+     	<!--  admin 得到用户活动报表 -->
+     	<action name="getSchemeUser" method="getSchemeUser" class="adminStatisticsAction"></action>
+     	
+     	<!--ADMIN 退出登入  -->
+     	<action name="cancealAdminLogin" method="cancealAdminLogin" class="adminStatisticsAction"></action>
+     	<!--admin 信息update  -->
+     	<action name="adminDetailUpdate" method="adminDetailUpdate" class="adminStatisticsAction"></action>
+     	<!--admin ajax 得到detail  -->
+     	<action name="getAdminDetail" method="getAdminDetail" class="adminStatisticsAction"></action>
+     	
+     	<!-- 以上为admin的操作 -->
+     	
+     	
+     	
+     	<!--为你推荐  ajax 用户  -->
+     	<action name="recommendUserMore" method="recommendUserMore" class="userAction"></action>
+ 		<!--为你推荐  -->
+ 		<action name="recommend" method="recommend" class="userAction">
+ 			<result name="success">/RecommendForYou/recommendForYou.jsp</result>
+ 		</action>
+ 		 <!-- follow分页操作  -->
+ 		 <action name="getFollowPagination" method="getFollowPagination" class="userAction"></action>
+ 		 <!-- 滚轮自动加载更多 -->
+		 <action name="getUserUpdateMore" class="userAction" method="getUserUpdateMore"></action>
+		 <!-- 用户信息修改 -->
+		 <action name="updateUser" class="userAction" method="updateUser">
+			<result name="success" type="redirectAction">
+				<param name="actionName">user/getUserUpdate</param>
+				<param name="userUpdateName">${account}</param>
+				<param name="category">activities</param>
+			</result>
+		    <result name="faile">/index.jsp</result>
+		</action>
+		
+     	<!--得到用户的详情   为了修改个人信息学  -->
+     	<action name="getUserDetail" class="userAction" method="getUserDetail">
+     		<result name="input">/index.jsp</result>
+     		<result name="success">/User/userDetailUpdate.jsp</result>
+     	</action>
+     	<!--ajax关注用户  -->
+     	<action name="focusUserOrNot"  class="userAction" method="focusUserOrNot"></action>
+     	<!-- 打开自己的主页的时候  显示动态 -->
+     	<action name="getUserUpdate" class="userAction" method="getUserUpdate">
+     		<result name="success">/User/userDetail.jsp</result>
+     		<result name="input">/index.jsp</result>
+     	</action>
+     	<!-- ajax登入验证 -->
+     	<action name="isExist"  class="userAction" method="isExist"></action>
+     	<action name="isCheckcodeTrue"  class="userAction" method="isCheckcodeTrue"></action>	
+     	<!-- 注册 -->
+		  <action name="regist" class="userAction" method="regist">
+		  	<result name="success" type="redirect" >/User/Login.jsp</result>
+		 </action>
+     	<!-- 登录   ajax -->
+		 <action name="loginValid" class="userAction" method="loginValid"></action>
+     	<!--注销  -->
+ 		<action name="cancel" class ="userAction" method="cancel">
+ 			<result name="success" type="redirect" >/index.jsp</result>
+ 		</action>
+ 		<!-- 验证码操作 -->
+		<action name="checkImg" class="userAction" method="checkImg"></action>
+		
+ 
+     	
+     	<!--全部标记未已读  -->
+     	<action name="changeNewsAllToRead"  class="userAction" method="changeNewsAllToRead">
+     		<result name="success" type="redirectAction">getNewsAllUnread</result>
+     	</action>
+ 		<!-- 点击得到收到的详细 -->
+ 		<action name="getNewsDetail" class="userAction" method="getNewsDetail">
+ 			<result name="sportDetail" type="redirectAction">
+ 				<param name="namespace">/sport</param>
+ 				<param name="actionName">getSportDetial?sport.id=${news2.title_id}</param>
+ 			</result>
+ 			<result name="articleDetail" type="redirectAction">
+ 				<param name="namespace">/article</param>
+ 				<param name="actionName">getArticleDetail?userArticle.id=${news2.title_id}</param>
+ 			</result>
+ 		</action>
+ 		<!--查看所有已读消息-->
+ 		<action name="getNewsAllRead" class="userAction" method="getNewsAllRead">
+ 			<result name="success" >/User/newsRead.jsp</result>
+ 		</action>
+ 		<!-- 查看多有未读消息 -->
+ 		<action name="getNewsAllUnread" class="userAction" method="getNewsAllUnread">
+ 			<result name="success" >/User/newsUnread.jsp</result>
+ 		</action>
+ 
+
+		
+
+ 	
+     </package>  
+ 	
+ 	
+ 
+</struts>

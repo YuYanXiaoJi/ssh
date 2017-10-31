@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.Category1" table="tb_Category1" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+        
+        <property name="name" type="java.lang.String"></property>
+        
+        <set name="sport" inverse="true" lazy="false" >	<!--让多方变成主动都对象  -->
+        	<key column="category1_id"></key>
+        	<one-to-many class="com.Entity.Sport" />
+        </set>
+     
+    </class>
+    
+
+</hibernate-mapping>

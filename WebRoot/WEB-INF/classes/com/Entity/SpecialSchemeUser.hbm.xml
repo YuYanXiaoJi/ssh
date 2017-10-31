@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.SpecialSchemeUser" table="tb_SpecialSchemeUser" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+ 
+        
+        <many-to-one name="schemeId"	class="com.Entity.SpecialScheme"
+   			column="schemeId"	not-null="true"	>
+   		</many-to-one>
+ 
+	
+	<property name="realName" type="java.lang.String"></property>
+	<property name="telephone" type="java.lang.String"></property>
+	<property name="address" type="java.lang.String"></property>
+	<property name="age" type="java.lang.Integer"></property>
+	<property name="sex" type="java.lang.String"></property>
+	
+          
+            
+    </class>
+   
+</hibernate-mapping>

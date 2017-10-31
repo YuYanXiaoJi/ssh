@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.SpecialScheme" table="tb_SpecialScheme" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+  		
+  		<property name="title" type="java.lang.String"></property>
+        <property name="time" type="java.util.Date"></property>
+        
+        <property name="page1" type="java.lang.String"></property>
+ 		 <property name="h1" type="java.lang.String"></property>
+        <property name="p1" type="java.lang.String"></property>
+        
+        <property name="page2" type="java.lang.String"></property>
+ 		 <property name="h2" type="java.lang.String"></property>
+        <property name="p2" type="java.lang.String"></property>
+        
+        <property name="page3" type="java.lang.String"></property>
+ 		 <property name="h3" type="java.lang.String"></property>
+        <property name="p3" type="java.lang.String"></property>
+        
+        <property name="page4" type="java.lang.String"></property>
+ 		 <property name="h4" type="java.lang.String"></property>
+        <property name="p4" type="java.lang.String"></property>
+        
+        <property name="page5" type="java.lang.String"></property>
+ 		 <property name="h5" type="java.lang.String"></property>
+        <property name="p5" type="java.lang.String"></property>
+        
+        <property name="userCount" type="java.lang.Integer"></property>	
+    </class>
+    
+
+</hibernate-mapping>

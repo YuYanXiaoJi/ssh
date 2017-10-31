@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.UserArticle" table="tb_UserArticle" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+        
+        <property name="time" type="java.util.Date"></property>
+        <property name="title" type="java.lang.String">
+        	<column name="title" length="1000"></column>
+        </property>
+        <property name="content" type="java.lang.String">
+        	<column name="content" length="10000000" ></column>	
+        </property>
+         
+        <many-to-one name="user"  column="user_id" class="com.Entity.User" lazy="false" ></many-to-one>
+        
+        <property name="tag" type="java.lang.String">
+        	<column name="tag" length="100"></column>
+        </property>
+        
+        <property name="wantCount" type="java.lang.Integer"></property>
+        <property name="commentCount" type="java.lang.Integer"></property>
+        
+        <property name="cover" type="java.lang.String"></property>
+        
+        <property name="greatCount" type="java.lang.Integer"></property>
+        
+        <property name="score" type="java.lang.Double"></property>
+        <property name="isDraft" type="java.lang.String"></property>
+        <property name="isExamination" type="java.lang.String"></property> 
+         
+    </class>
+    
+
+</hibernate-mapping>

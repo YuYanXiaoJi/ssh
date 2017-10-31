@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.ArticleGreat" table="tb_ArticleGreat" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+       
+        <many-to-one name="userArticle" column="userArticle_id" 
+        	class="com.Entity.UserArticle"></many-to-one> 
+        
+        <many-to-one name="user" column="user_id" class="com.Entity.User"></many-to-one>
+        
+       
+    </class>
+    
+
+</hibernate-mapping>

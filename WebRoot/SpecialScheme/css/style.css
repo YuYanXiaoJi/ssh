@@ -1,0 +1,132 @@
+body, div, h1, h2, h3, h4, h5, h5, p, ul, ol, li, dl, dt, dd { margin: 0; padding: 0;}
+ul, ol { list-style-type: none;}
+
+body { font: 14px "Microsoft Yahei",Arial,Helvetica,sans-serif; color: #515151;}
+a { color: #515151; text-decoration: none;}
+a:hover { color: #31a5e7;}
+
+.clearfix:after { content: ""; display: table; clear: both;}
+
+.ml-nav { position: fixed; top: 0; left: 0; z-index: 10; width: 100%; padding: 15px 0; background-color: rgba(255, 255, 255, 0.85);}
+ 
+.ml-link { float: right; margin: 8px 150px 0 0; font-size: 0;}
+.ml-link a { display: inline-block; margin: 0 15px; font-size: 14px;}
+.buy-now { position: absolute; right: 0; top: 0; width: 100px; height: 36px; line-height: 36px; text-align: center; color: #fff; background-color: #3db1fa;}
+.buy-now:hover { color: #fff;}
+
+.center-wrap { position: relative; z-index: 1; width: 1040px; height: 100%; margin: 0 auto;}
+.desc { position: relative; z-index: 1;}
+
+.section { overflow: hidden;}
+.section h1 { margin-bottom: 20px; line-height: 1.4; font-size: 40px; font-weight: 400;}
+.section p { line-height: 25px;}
+
+.section .meizu-logo { float: left; margin: 0; padding: 30px 0;}
+.meizu-logo a { float: left; width: 114px; height: 20px; font-size: 0; background-image: url(../images/logo.jpg);}
+.nav { float: right; margin-right: 150px;}
+.nav li { float: left;}
+.nav a { display: block; padding: 31px 22px 30px;}
+.login { position: absolute; right: 0; top: 31px;}
+.login a { margin: 0 5px; padding-top: 31px;}
+
+.banner { background: url(../images/bg1-s.jpg) 50% 0 no-repeat;}
+.banner-desc { position: absolute; width: 386px; margin: 0 auto; color: #FFF; bottom: 95px; left: 50%; margin-left: -193px;}
+.banner-desc h1 { text-align: center;}
+
+.thin { background: url(../images/bg2.jpg) 50% 0 no-repeat;}
+.thin-desc { width: 574px; margin: 0 auto; padding-top: 126px; text-align: center;}
+.thin-img { position: absolute; top: 168px; left: 50%; margin-top: 100px; margin-left: -600px;}
+.thin-img img { position: absolute;}
+.thin-img1 { left: 230px; width: 400px;}
+.thin-img2 { left: 480px; width: 500px;}
+
+.cnc { background: #ff8fa5 url(../images/bg3-s.jpg) center 0 no-repeat;}
+.cnc-desc { padding-top: 40%; width: 400px;}
+
+.screen { background: url(../images/bg4-s.jpg) center 0 no-repeat;}
+.screen-desc { position: relative; width: 540px; padding-top: 100px; z-index: 1;}
+.parameters-list { margin-top: 28px; width: 230px;}
+.parameters-list li { position: relative; border-top: #333 1px solid; border-bottom: #333 1px solid; margin-bottom: -1px;}
+.parameters-list li h2 { font-size: 32px; font-weight: 400; height: 80px; line-height: 80px; margin-top: 0!important;}
+.parameters-list li i { display: inline-block; position: absolute; top: 66px; font-size: 12px;}
+.parameters-list li span { position: absolute; top: 30px; right: 0; font-size: 14px;}
+.parameters-list li.ps h2 { position: relative; line-height: 90px;}
+.parameters-list li.ps span { top: 26px;}
+.screen-img { position: absolute; bottom: 0; right: 0; line-height: 0;}
+.screen-img img { width: 900px;}
+
+.cpu { background: url(../images/bg5-s.jpg) center 0 no-repeat;}
+.cpu-desc { padding-top: 10%; width: 610px; margin: 0 auto;}
+.cpu-img { position: absolute; bottom: -346px; left: 50%; margin-left: -500px;}
+.cpu-img img { width: 1000px;}
+
+.net-desc { position: absolute; right: 0; padding-top: 30%; width: 490px; z-index: 1;}
+.net-img { position: absolute; top: 4%; left: -264px;}
+.net-img img { width: 1200px;}
+.net-img .cc { position: absolute; top: 384px; left: 520px; width: 378px;}
+.net-img .cc2 { top: 385px;}
+
+.camera { background: url(../images/bg7-s.jpg) center 0 no-repeat;}
+.camera-desc { position: absolute; padding-top: 30%; left: 144px; width: 460px;}
+
+.battery { background-color: #00b4ec;}
+.battery-desc { position: absolute; right: 0; padding-top: 26%; width: 410px; text-align: right;}
+.battery-img { position: absolute; bottom: -10px; left: -200px;}
+.battery-img img { width: 1000px;}
+
+.flyme { background: url(../../images/meilannote2/features/bg9-s.jpg) center 0 no-repeat;}
+.flyme-desc { padding-top: 14%; text-align: center;}
+.flyme-img { position: absolute; top: 0; left: 50%; margin-left: -600px; padding-top: 400px; width: 1200px; height: 752px; z-index: 1;}
+.flyme-img { position: absolute; top: 0; left: 50%; margin-left: -400px; padding-top: 290px; width: 800px; height: 752px; z-index: 1;}
+.flyme-img img { position: absolute;}
+.flyme-pic1 { width: 296px; left: 0; padding-top: 60px;}
+.flyme-pic2 { width: 310px; left: 236px; z-index: 1;}
+.flyme-pic3 { width: 296px; left: 482px; padding-top: 60px;}
+
+.footer-link { padding: 30px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+.footer-link dl { float: left; width: 19.9%;}
+.footer-link dt { line-height: 45px; font-weight: 700;}
+.footer-link dd { line-height: 28px;}
+.footer-link a { color: #515151; text-decoration: none;}
+.footer-link a:hover { color: #31a5e7;}
+
+.copyright { padding: 20px 0; text-align: center;}
+
+#fp-nav ul li:first-child, #fp-nav ul li:last-child { display: none;}
+.copyrights{
+	text-indent:-9999px;
+	height:0;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+}
+
+@media screen and (min-width:1920px) {
+	.banner { background: url(../images/bg1.jpg) center 0 no-repeat;}
+	.thin { background: url(../images/bg2.jpg) center 0 no-repeat;}
+	.cnc { background: url(../images/bg3.jpg) center 0 no-repeat;}
+	.screen { background: url(../images/bg4.jpg) center 0 no-repeat;}
+	.cpu { background: url(../images/bg5.jpg) center 0 no-repeat;}
+	.camera { background: url(../images/bg7.jpg) center 0 no-repeat;}
+	.flyme { background: url(../images/bg9.jpg) center 0 no-repeat;}
+	.cnc-desc { padding-top: 50%;}
+	.thin-img { margin-top: 100px; margin-left: -720px;}
+	.thin-img2 { left: 400px;}
+	.thin-img1 { left: 230px; width: auto;}
+	.thin-img2 { left: 480px; width: auto;}
+	.screen-desc { padding-top: 200px;}
+	.screen-img img { width: 1200px;}
+	.cpu-img { position: absolute; bottom: -300px; left: 50%; margin-left: -666px;}
+	.cpu-img img { width: 1200px;}
+	.net-img { top: 16%; left: 0;}
+	.battery-img img { width: 1200px;}
+	.flyme-img { position: absolute; top: 0; left: 50%; margin-left: -600px; padding-top: 400px; width: 1200px; height: 752px; z-index: 1;}
+	.flyme-img img { position: absolute;}
+	.flyme-pic1 { left: 0; padding-top: 60px; width: auto;}
+	.flyme-pic2 { left: 368px; width: auto; z-index: 1;}
+	.flyme-pic3 { left: 755px; padding-top: 60px; width: auto;}
+	.parameters-list li h2 { height: 100px; line-height: 100px;}
+}
+@media screen and (max-width:1440px) {
+	.cnc { background: url(../images/bg3-xs.jpg) center 0 no-repeat;}
+}

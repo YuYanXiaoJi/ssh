@@ -1,0 +1,119 @@
+ 
+/******** SAP ************/
+.sap_tabs{
+	clear:both;
+	  padding: 2em 0 2em;
+}
+.tab_box{
+	background:#fd926d;
+	padding: 2em;
+}
+.top1{
+	margin-top: 2%;
+}
+.tab-1 img {
+	height: 562;
+}
+.resp-tabs-list {
+width: 50%;
+  list-style: none;
+  padding: 0;
+   margin: 0 auto 1.3em;
+}
+.resp-tab-item{
+  color: #000;
+    font-size: 1.1em;
+  cursor: pointer;
+  padding: 6px;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  float: left;
+  width: 29%;
+  outline: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 2px solid #000;
+  margin: 0 0.5em 0;
+}
+.resp-tab-active{
+	background:#ff5d56;
+	text-shadow: none;
+	color:#fff;
+	border: 2px solid #ff5d56;
+}
+.resp-tabs-container {
+	padding: 0px;
+	background-color: #fff;
+	clear: left;
+	
+}
+h2.resp-accordion {
+	cursor: pointer;
+	padding: 5px;
+	display: none;
+}
+.resp-tab-content {
+	display: none;
+}
+.resp-content-active, .resp-accordion-active {
+   display: block;
+}
+.img-top {
+  float: left;
+  width: 33.33%;
+  position: relative;
+  padding: 7px;
+}
+
+.tab_desc {
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0px;
+  width: 98%;
+  height: 100%;
+  padding: 14em 2em 0;
+  display: none;
+}
+/*----*/
+ 
+/*----*/
+ 
+h6.jean{
+  float: left;
+  color: #fff;
+  font-size: 1.9em;
+  font-weight: 600;
+  margin-top: 0.3em;
+}
+span.dollor{
+  float: right;
+  font-size: 2.5em;
+  color: rgba(205, 11, 33, 0.99);
+  font-weight: 400;
+}
+.social-in {
+	float: right;
+}
+.social {
+	float:left;
+}
+ 
+ 
+.agency {
+  padding: 15em 0 0;
+}
+.img-top:hover .tab_desc{
+	display: block;
+}
+.sap_tabs h2{
+  color: #000;
+  font-size: 3em;
+  text-align: center;
+   padding: 0em 0 .8em;
+}
+ 

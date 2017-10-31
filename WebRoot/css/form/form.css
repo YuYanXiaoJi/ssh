@@ -1,0 +1,77 @@
+ 
+input,label{
+        -webkit-transition:all 0.2s ease;
+        display: block;
+        box-sizing: border-box;
+        padding-left: 15px;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        font-size: 1em;
+        border: 1px solid darkgray;
+        border-radius: 20px;
+		 
+    }
+     
+    label{
+        padding-left: 0;
+        border: none;
+        margin-top: -50px;
+
+    }
+    
+    label:before,textarea:before{
+        -webkit-transition:all 0.2s ease;
+        display: block;
+        background-color: #ffffff;
+        margin-left: 730px;
+        margin-top: 15px;
+        color: darkgray;
+        position: absolute;
+        font-size: 1em;
+        content: attr(data-hold);
+    }
+    input:focus{
+        border: 1px solid #b3e5e1;
+    }
+    input:focus+label:before,
+
+    input[id="individualSignature"]:valid,
+    input[type="password"]:valid,
+ 
+    input[id="individualSignature"]:valid+label:before,
+    input[type='password']:valid+label:before,
+    
+    
+    
+  /* ÉÏ´« */  
+  .report-file {
+            display: block;
+            position: relative;
+            width: 120px;
+            height: 28px;
+            overflow: hidden;
+            border: 1px solid #428bca;
+            background: none repeat scroll 0 0 #428bca;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+            float: left;
+            margin-right:5px;
+        }
+        .report-file span {
+            cursor: pointer;
+            display: block;
+            line-height: 28px;
+        }
+        .file-prew {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left:0;
+            width: 120px;
+            height: 30px;
+            font-size: 100px; 
+            opacity: 0; 
+            filter: alpha(opacity=0);
+        }

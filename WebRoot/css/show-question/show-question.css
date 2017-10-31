@@ -1,0 +1,147 @@
+ /*对于相关的问题推荐的列表  */
+ .page-sidebar #twitter_update_list > ul {
+  margin: 0 0 10px;
+}
+.page-sidebar #twitter_update_list > ul > li {
+  background: none;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+}
+.page-sidebar #twitter_update_list > ul > li span {
+  display: block;
+  font-size: 11px;
+}
+ 
+ .span4 {
+    width: 280px;
+  }
+
+.widget ul li {
+  list-style: none;
+      width: 80%;
+  padding: 8px 8px 8px 23px;
+  background: url("./images/li-arrow.png") no-repeat 8px 15px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.widget ul li:last-child {
+  border-bottom: none;
+}
+.widget > div > ul,
+.widget > ul {
+  margin-left: 0;
+}
+.widget ul{
+	padding: 0;
+    margin: 0 0 11px 0px;
+}
+
+
+/*--------------------------------------------------- -------------------------*/
+.hentry .wp-post-image {
+  margin: 0 0 20px;
+}
+
+.main-listing article.hentry {
+  margin-bottom: 0;
+}
+
+.hentry .post-meta {
+  padding: 4px 3px 4px 0px;
+  border-top: 4px solid #f2f2f2;
+  border-bottom: 4px solid #f2f2f2;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.hentry .post-meta > span {
+  display: inline-block;
+  padding-left: 22px;
+  margin-right: 15px;
+  line-height: 22px;
+}
+.hentry .post-meta .date {
+  background: url("./images/calendar-icon.png") no-repeat left center;
+}
+.hentry .post-meta .category {
+  background: url("./images/category-icon.png") no-repeat left center;
+}
+.hentry .post-meta .author {
+  background: url("./images/user.png") no-repeat left center;
+}
+.hentry .post-meta .comments {
+  background: url("./images/comment.png") no-repeat left center;
+}
+.hentry .post-meta .like-count {
+  float: right;
+  background: url("./images/like.png") no-repeat 4px 6px;
+}
+.hentry .post-meta .like-count:hover {
+  background: url("./images/like.png") no-repeat 4px -24px;
+  color: #395996;
+}
+
+.hentry.type-post .post-title {
+  padding-left: 35px;
+  background: url("./images/standard-large.png") no-repeat 0 3px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.hentry.type-post h1.post-title {
+  font-size: 26px;
+  line-height: 36px;
+  background-position: 0 6px;
+}
+.hentry.type-post h1.post-title a {
+  color: ##428bca;
+}
+.hentry a:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.single-faq .hentry h1.post-title {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.hentry.format-image .post-title {
+  background: url("./images/image-large.png") no-repeat 0 3px;
+}
+
+.hentry.format-video .post-title {
+  background: url("./images/video-large.png") no-repeat 0 3px;
+}
+
+.faq.hentry .post-title {
+  background: url("./images/question-large.png") no-repeat 0 5px;
+  padding-left: 30px;
+}
+
+  .hentry .post-meta .like-count {
+    float: none;
+  }
+
+  
+/*---------------------------------------------------------------------------------------*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+

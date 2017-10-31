@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  >
+
+    <class name="com.Entity.UserArticleReply" table="tb_UserArticleReply" schema="dbo" catalog="City">
+       
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="native"/>
+        </id>
+        
+        <many-to-one name="userArticle" column="userArticle_id"  class="com.Entity.UserArticle" lazy="false"></many-to-one>
+        
+        <property name="targetCRId" type="java.lang.Integer"></property>
+        <property name="type" type="java.lang.String"></property>
+        
+        <many-to-one name="user" column="user_id" class="com.Entity.User" lazy="false" ></many-to-one>
+        
+        <many-to-one name="targetUser" column="targetUser_id"  class="com.Entity.User" lazy="false" ></many-to-one>
+ 		
+ 		<property name="time" type="java.util.Date"></property>
+ 		
+ 		<property name="content" type="java.lang.String" length="8000"></property>
+ 		
+    </class>
+    
+
+</hibernate-mapping>

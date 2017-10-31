@@ -1,0 +1,184 @@
+.search-header-searchbox {
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 30.125rem;
+    height: 3.2rem;
+    position: relative;
+    margin-left: 1.25rem;
+    background: #FFF;
+    border-radius: 1.3125rem;
+    box-sizing: border-box;
+    border: #d9d9d9 solid 1px;
+    transition: all 0.3s ease;
+}
+.search-header-searchbox input {
+    height: 3.2rem;
+    margin-top: 0.1rem;
+    overflow: hidden;
+    line-height: 1.8rem;
+    background: transparent;
+    font-size: 1rem;
+    margin-left: 1.3125rem;
+    width: 25rem;
+    border: none;
+    outline: none;
+}
+ /* 以上为搜索框   一下为内容*/
+ 
+.search-header-mps .common-wrapper {
+    margin-top: 1rem;
+    text-align: left;
+}
+.common-wrapper {
+    max-width: 77.5rem;
+    margin: 0 auto;
+}
+article, aside, blockquote, body, button, dd, details,div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+.search-header-mps .common-wrapper a:link, .search-header-mps .common-wrapper a:visited {
+    color: #888;
+}
+.search-header-mps .common-wrapper a {
+    padding: 0 0.875rem;
+    border: transparent solid 1px;
+}
+.search-header-mps .common-wrapper span, .search-header-mps .common-wrapper a {
+    display: inline-block;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-size: 17;
+}
+a {
+    background: 0 0;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    transition: color .2s ease;
+    color: #888;
+}
+ .common-wrapper {
+    margin-top: 1rem;
+    text-align: left;
+    margin-left: 50px;
+}
+.search-header-tabs {
+    height: 2.0625rem;
+    margin-top: 1rem;
+    background-color: white;
+}
+.search-header-tabs .common-wrapper a.on {
+    height: 2rem;
+    border-bottom: #b3e5e1 solid 4px;
+}
+.mfw-search-main {
+    font-size: 13px;
+}
+.mfw-search-main p,div {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+.mfw-search-main .wid {
+    width: 985px;
+    padding-left: 125px;
+    padding-bottom: 60px;
+    margin-left: -70;
+}
+.ser-nums {
+    color: #666;
+    margin: 20px 0;
+}
+.ser-nums .ser-result-primary {
+    font-size: 12px;
+    color: #999;
+}
+.ser-lt {
+    width:1000px;
+   /*  overflow: hidden; */
+}
+.flt1 {
+    float: left;
+}
+ul, ol, li, dl, dd, dt {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.ser-lt .att-list > ul > li:first-child {
+    margin-top: 10px;
+}
+.ser-lt .att-list > ul > li {
+    margin-top: 30px;
+}
+.flt1 {
+    float: left;
+}
+.mfw-search-main a {
+    color: #333;
+    font-size: 14px;
+}
+.ser-lt .ct-text {
+    padding-left: 160px;
+}
+.mfw-search-main h3 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #333; 
+}
+.ser-lt .ct-text h3 {
+    margin-bottom: 8px;
+    margin-left:120;
+    line-height: 18px;
+   /*  overflow: hidden; */
+   /*  white-space: nowrap; */
+    word-wrap: break-word;
+    word-break : break-all;
+    
+}
+.mfw-search-main h3 a {
+    font-size: 20px;
+    color: #333;
+    line-height: 25px
+}
+ body, p, div {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+.ser-lt .ct-text .seg-desc {
+     overflow: hidden;
+    margin-bottom: 4px;
+    margin-left: 120;
+    font-size: 16px;
+   max-height: 113px;
+   color: #888;
+ 
+}
+.marker {
+    position: absolute;
+    top: 0.45rem;
+    left: 1rem;
+    border-radius: 0.25rem;
+}
+ 
+ 
